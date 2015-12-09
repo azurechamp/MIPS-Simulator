@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="MIPS_Simulator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MIPS_Simulator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Margin="20" Text="MIPS Simulator"></TextBlock>
+            <TextBlock Text=" Assembly Code for simulation " FontSize="22" Margin="10"></TextBlock>
+            <TextBlock Margin="20" Width="400" HorizontalAlignment="Left" Height="400" Text="#Testing r-format arithmetic operators&#xD;&#xA;&#xD;&#xA;#init registers&#xD;&#xA;.register $s0 -10&#xD;&#xA;.register $s1 5&#xD;&#xA;.register $s2 3&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;main:&#x9;add $s3, $s1, $s1&#x9;#5+10&#xD;&#xA;&#x9;&#x9;add $s4, $s1, $s0&#x9;#5+-10&#xD;&#xA;&#x9;&#x9;sub $s5, $s1, $s2&#x9;#5-3&#xD;&#xA;&#x9;&#x9;sub $s6, $s2, $s1&#x9;#3-5&#xD;&#xA;&#x9;&#x9;and $s7, $s2, $s1&#x9;#011 AND 101&#xD;&#xA;exit: &#xD;&#xA;&#xD;&#xA;" TextWrapping="Wrap" Foreground="White" SelectionHighlightColor="#FFE2E2E2" FontSize="18.667"></TextBlock>
+            <Button Height="40" Width="190" Margin="15" Content="Simulate" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
