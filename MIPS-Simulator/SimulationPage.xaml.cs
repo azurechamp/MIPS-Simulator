@@ -37,31 +37,32 @@ namespace MIPS_Simulator
         {
             if (counter == 0)
             {
-                Step2.Begin();
+                MainSb.Begin();
+                MainSb.Completed += MainSb_Completed;
                 
             }
             if (counter == 1)
             {
                 Turn2();
-                Step2.Begin();
+                MainSb.Begin();
                
             }
             if (counter == 2)
             {
                 TurnTurn();
-                Step2.Begin();
+                MainSb.Begin();
                 
             }
             if (counter == 3)
             {
                 Turn3();
-                Step2.Begin();
+                MainSb.Begin();
                
             }
             if (counter == 4)
             {
                 Turn4();
-                Step2.Begin();
+                MainSb.Begin();
             }
             if (counter > 4)
             {
@@ -71,81 +72,46 @@ namespace MIPS_Simulator
             counter++;
 
         }
+
+        private void MainSb_Completed(object sender, object e)
+        {
+            
+        }
+
         void Turn2()
         {
-            p1.ValueOfPacket = "4";
-            p2.ValueOfPacket = "add $s4 , $s1 , $s0";
-            p3.ValueOfPacket = "1";
-            p4.ValueOfPacket = "10001";
-            p5.ValueOfPacket = "10000";
-            p6.ValueOfPacket = "10100";
-            p7.ValueOfPacket = "100000";
-            p8.ValueOfPacket = "010";
-            p9.ValueOfPacket = "5";
-            p10.ValueOfPacket = "3";
-            p11.ValueOfPacket = "0";
-            p12.ValueOfPacket = "-2";
-            f1.ValueOfPacket = "0..100";
-            f3.ValueOfPacket = "8";
+            adder.ValueOfPacket = "4";
+            adder1.ValueOfPacket = "8";
+            adder2.ValueOfPacket = "8";
+               
 
         }
 
         void TurnTurn()
         {
-            p1.ValueOfPacket = "8";
-            p2.ValueOfPacket = "sub $s5 , $s1 , $s2";
-            p3.ValueOfPacket = "1";
-            p4.ValueOfPacket = "10001";
-            p5.ValueOfPacket = "10000";
-            p6.ValueOfPacket = "10100";
-            p7.ValueOfPacket = "100000";
-            p8.ValueOfPacket = "010";
-            p9.ValueOfPacket = "5";
-            p10.ValueOfPacket = "3";
-            p11.ValueOfPacket = "0";
-            p12.ValueOfPacket = "2";
-            f1.ValueOfPacket = "0..100";
-            f3.ValueOfPacket = "12";
 
+            adder.ValueOfPacket = "4";
+            adder1.ValueOfPacket = "12";
+            adder2.ValueOfPacket = "12";
 
         }
 
         void Turn3()
         {
-            p1.ValueOfPacket = "8";
-            p2.ValueOfPacket = "sub $s5 , $s1 , $s2";
-            p3.ValueOfPacket = "1";
-            p4.ValueOfPacket = "10001";
-            p5.ValueOfPacket = "10000";
-            p6.ValueOfPacket = "10100";
-            p7.ValueOfPacket = "100000";
-            p8.ValueOfPacket = "010";
-            p9.ValueOfPacket = "5";
-            p10.ValueOfPacket = "3";
-            p11.ValueOfPacket = "0";
-            p12.ValueOfPacket = "2";
-            f1.ValueOfPacket = "0..100";
-            f3.ValueOfPacket = "16";
+            adder.ValueOfPacket = "4";
+            adder1.ValueOfPacket = "16";
+            adder2.ValueOfPacket = "16";
+
 
 
         }
 
         void Turn4()
         {
-            p1.ValueOfPacket = "16";
-            p2.ValueOfPacket = "and $s7 , $s2 , $s1";
-            p3.ValueOfPacket = "1";
-            p4.ValueOfPacket = "10001";
-            p5.ValueOfPacket = "10000";
-            p6.ValueOfPacket = "10100";
-            p7.ValueOfPacket = "100000";
-            p8.ValueOfPacket = "000";
-            p9.ValueOfPacket = "5";
-            p10.ValueOfPacket = "3";
-            p11.ValueOfPacket = "0";
-            p12.ValueOfPacket = "1";
-            f1.ValueOfPacket = "0..100";
-            f3.ValueOfPacket = "20";
+
+            adder.ValueOfPacket = "4";
+            adder1.ValueOfPacket = "20";
+            adder2.ValueOfPacket = "20";
 
         }
 
@@ -195,7 +161,7 @@ namespace MIPS_Simulator
 
         void Manupulations()
         {
-           string a = Converters.AddTwoBinary(p1.ValueOfPacket, p4.ValueOfPacket);
+          // string a = Converters.AddTwoBinary(p1.ValueOfPacket, p4.ValueOfPacket);
         }
     }
 }

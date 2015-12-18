@@ -7,28 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <Storyboard x:Name="Step1">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.158" Value="35"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.628" Value="36.333"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="352.333"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="78"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.667"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.158" Value="-2.667"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.628" Value="-270"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-272.667"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        <Storyboard x:Name="Step1"/>
         <Storyboard x:Name="Step2">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="p3">
                 <DiscreteObjectKeyFrame KeyTime="0">
@@ -41,180 +20,470 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="4.669"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="244.122"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p4">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="454.667"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="454"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p4">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-75.333"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="4"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p4">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="1"/>
+        </Storyboard>
+        <Storyboard x:Name="MainSb">
+            <ColorAnimation Duration="0" To="#FFE00000" Storyboard.TargetProperty="(Control.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="adder1" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="adder1" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="adder1">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
             </ObjectAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:1.9" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p5" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p5">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="10001"/>
+            <DoubleAnimation Duration="0" To="0.99" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="adder1" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="adder1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-21.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-22.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="55.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="adder1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-13"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-291"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-294"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="adder2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-19"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-22"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="adder2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="28"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="73"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="adder2" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.7" Value="-4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-17"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.7" Value="-12"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="adder2">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p6">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1.333"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="126.666"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC_Copy1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="99"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="97"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p6">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="22"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="32"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC_Copy1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="26"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="99"/>
             </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:1.9" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p6" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p6">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="10001"/>
+            <ColorAnimation Duration="0:0:0.8" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC_Copy1" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC_Copy1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="add $s3, $s3 , $s2"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p7">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="52"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="62"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p7">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="2"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="127.333"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:1.9" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p7" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p7">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="10011"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="10010"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p8">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-4"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.374" Value="4"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="377"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p8">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="92"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.374" Value="228"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="236.334"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:1.9" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p8" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p8">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="100000"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC1" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC2" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="10011"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p5">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="125.333"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p5">
-                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="10"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p9">
-                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="377"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="378"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p9">
-                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="217"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="104"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:3.9" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p9" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p9">
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="010"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC3" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC3">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="000000"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p11">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="217.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="343.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p11">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="15"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="24"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p10">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="217.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="343.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p10">
-                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="54"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="63"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:4.4" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p10" d:IsOptimized="True"/>
-            <ColorAnimation Duration="0:0:4.4" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p11" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p10">
-                <DiscreteObjectKeyFrame KeyTime="0:0:4.4" Value="5"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC4" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC4">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="10010"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p11">
-                <DiscreteObjectKeyFrame KeyTime="0:0:4.4" Value="5"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC5">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="10011"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimation Duration="0:0:4.4" To="0.898" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="p10" d:IsOptimized="True"/>
-            <DoubleAnimation Duration="0:0:4.4" To="0.898" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="p11" d:IsOptimized="True"/>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p12">
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="438"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="511"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC5" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:1.4" To="0.77" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="packetUC5" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:1.4" To="0.68" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="packetUC5" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC5">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="54"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p12">
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="25"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="-40"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC5">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="12"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="p13">
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="436"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="511"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="503"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:6.9" Value="69"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="71"/>
+            <DoubleAnimation Duration="0:0:1.4" To="1.533" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="packetUC6" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC6">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="16"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="174"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="p13">
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="72"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="80"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="268"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:6.9" Value="265"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="116"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:5" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p12" d:IsOptimized="True"/>
-            <ColorAnimation Duration="0:0:5" To="#FFF00000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="p13" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p12">
-                <DiscreteObjectKeyFrame KeyTime="0:0:5" Value="0"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC6" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC6">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="1001100000001000000"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="p13">
-                <DiscreteObjectKeyFrame KeyTime="0:0:5" Value="10"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC7">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4" Value="100000"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="f1">
-                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="-9"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="90"/>
+            <ColorAnimation Duration="0:0:1.4" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC7" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="39"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="f1">
-                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="-272"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="-266"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-119"/>
             </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:7.7" To="#FF360707" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" Storyboard.TargetName="f1" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="f1">
-                <DiscreteObjectKeyFrame KeyTime="0:0:7.7" Value="0..100"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="133"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="134"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC4">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="64"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC4">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC6">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC7">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="317"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC7">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC8" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC8">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
             </ObjectAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:7.7" To="#FFF90000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="f1" d:IsOptimized="True"/>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="f2">
-                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="169"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9.1" Value="168"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="-372"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-373"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11" Value="-302"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="f2">
-                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="-298"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:9.1" Value="-361"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.1" Value="-362"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11" Value="2"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:8.3" To="#FFF90000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="f2" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="f2">
-                <DiscreteObjectKeyFrame KeyTime="0:0:8.3" Value="0..100"/>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC9" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC9">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="f3">
-                <EasingDoubleKeyFrame KeyTime="0:0:11" Value="-245"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.4" Value="-252"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.9" Value="28"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="f3">
-                <EasingDoubleKeyFrame KeyTime="0:0:11" Value="-16"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.4" Value="-301"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:11.9" Value="-302"/>
-            </DoubleAnimationUsingKeyFrames>
-            <ColorAnimation Duration="0:0:11" To="#FFF90000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="f3" d:IsOptimized="True"/>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="f3">
-                <DiscreteObjectKeyFrame KeyTime="0:0:11" Value="4"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC10">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
             </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC10" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC11" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC11">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC12">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC12" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC13">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC13" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC14" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC14">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC15">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="10"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC15" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:2" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC16" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC16">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="1"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC16">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="30"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC8">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="345"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC8">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-83"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC9">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="393"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC9">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-94"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC10">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="267"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC10">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-16"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC11">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="398"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC11">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="136"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC12">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="336"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC12">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="93"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC13">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="294"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC13">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="77"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC14">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="122"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC14">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="74"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC15">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="213"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC15">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="265"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC4_Copy">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="68"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="138"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC4_Copy">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2.5" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC4_Copy" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC4_Copy">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="10011"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2.9" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC17" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC17">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC18">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="2"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:2.9" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC18" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:2.9" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC19" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC19">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.9" Value="2"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC17">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="129"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC17">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC18">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="71"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="129"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC18">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="-8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC19">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="242"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC19">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="20"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:3.6" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC20" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC20">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="-26592"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC20">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="-432"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC20">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC21">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.5" Value="2"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:4.5" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC21" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC22">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.5" Value="2"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:4.5" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC22" d:IsOptimized="True"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC21">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="34"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC21">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="-6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC22">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="-35"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC22">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="131"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:4.8" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC23" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC23">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.8" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:4.8" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC24" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC24">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.8" Value="0"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:4.8" To="-113" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC24" d:IsOptimized="True"/>
+            <DoubleAnimation Duration="0:0:4.8" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC24" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC25">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.8" Value="2"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC25">
+                <EasingColorKeyFrame KeyTime="0:0:4.8" Value="Black"/>
+                <EasingColorKeyFrame KeyTime="0:0:5.6" Value="#FFB80000"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC25">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="41"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC25">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="-491"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:5.6" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC26" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC26">
+                <DiscreteObjectKeyFrame KeyTime="0:0:5.6" Value="0..100"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC26">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="41"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC26">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:6" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC27" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:6" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC28" d:IsOptimized="True"/>
+            <ColorAnimation Duration="0:0:6" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC29" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC27">
+                <DiscreteObjectKeyFrame KeyTime="0:0:6" Value="0..100"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC28">
+                <DiscreteObjectKeyFrame KeyTime="0:0:6" Value="0..100"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC29">
+                <DiscreteObjectKeyFrame KeyTime="0:0:6" Value="0..100"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC27">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="231"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC27">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="33"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC28">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="365"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC28">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC29">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="41"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC29">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="20"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:6.7" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC30" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC30">
+                <DiscreteObjectKeyFrame KeyTime="0:0:6.7" Value="111111111001100000000110"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC30">
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="69"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC30">
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:7" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC31" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC31">
+                <DiscreteObjectKeyFrame KeyTime="0:0:7" Value="0..100"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC31">
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.5" Value="53"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC31">
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.5" Value="9"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:7.5" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC32" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC32">
+                <DiscreteObjectKeyFrame KeyTime="0:0:7.5" Value="1000111001010001100000"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC32">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="177"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="499"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC32">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="-64"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:8" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="packetUC33" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="packetUC33">
+                <DiscreteObjectKeyFrame KeyTime="0:0:8" Value="0000"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="packetUC33">
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="50"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="packetUC33">
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-11"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimation Duration="0:0:8.9" To="#FFB80000" Storyboard.TargetProperty="(PacketUC.BrushOfPacket).(SolidColorBrush.Color)" Storyboard.TargetName="adder" d:IsOptimized="True"/>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(PacketUC.ValueOfPacket)" Storyboard.TargetName="adder">
+                <DiscreteObjectKeyFrame KeyTime="0:0:8.9" Value="4"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="adder">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.7" Value="-733"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="adder">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.7" Value="250"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Page.Resources>
 
@@ -227,83 +496,198 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Grid Height="650" Width="950">
-                    <Image x:Name="image" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Source="aaaaaa.png"/>
-                    <local:PacketUC x:Name="p1" HorizontalAlignment="Left" Margin="104,0,0,300" Width="13" BrushOfPacket="#FFF00000" ValueOfPacket="0" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
-                        <local:PacketUC.RenderTransform>
+                    <Image x:Name="image" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Source="mipsdpimg.png" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
                             <CompositeTransform/>
-                        </local:PacketUC.RenderTransform>
-                    </local:PacketUC>
-                    <local:PacketUC x:Name="p2" HorizontalAlignment="Left" Margin="104,0,0,283" Width="13" BrushOfPacket="#FFF00000" ValueOfPacket="0" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
-                        <local:PacketUC.RenderTransform>
-                            <CompositeTransform/>
-                        </local:PacketUC.RenderTransform>
-                    </local:PacketUC>
+                        </Image.RenderTransform>
+                    </Image>
                     <local:PacketUC x:Name="p3" HorizontalAlignment="Left" Margin="117,0,0,300" Width="94" BrushOfPacket="#FFF00000" ValueOfPacket="add $s3 , $s1 , $s1" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p4" HorizontalAlignment="Left" Margin="104,0,0,300" Width="13" BrushOfPacket="#FFF00000" ValueOfPacket="0" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="adder1" HorizontalAlignment="Left" Margin="118,319,0,317" Width="100" d:LayoutOverrides="Height" Background="Black" BorderBrush="Black" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p5" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="adder2" HorizontalAlignment="Left" Margin="118,319,0,317" Width="100" Background="Black" BorderBrush="Black" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Height">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p6" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC_Copy1" HorizontalAlignment="Left" Margin="118,319,0,317" Width="100" Background="Black" BorderBrush="Black" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Height">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p7" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC1" HorizontalAlignment="Left" Height="15" Margin="216,0,0,237" VerticalAlignment="Bottom" Width="60" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p8" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC2" HorizontalAlignment="Left" Height="15" Margin="218,0,0,251" VerticalAlignment="Bottom" Width="58" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p9" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC3" HorizontalAlignment="Left" Height="17" Margin="217,0,0,283" VerticalAlignment="Bottom" Width="64" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p10" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC4" HorizontalAlignment="Left" Height="15" Margin="217,0,0,203" VerticalAlignment="Bottom" Width="51" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p11" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC5" HorizontalAlignment="Left" Height="25" Margin="218,0,0,172" VerticalAlignment="Bottom" Width="61" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p12" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC6" HorizontalAlignment="Left" Height="16" Margin="215,0,0,114" VerticalAlignment="Bottom" Width="60" RenderTransformOrigin="0.5,0.5" BrushOfPacket="Black">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="p13" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                    <local:PacketUC x:Name="packetUC7" HorizontalAlignment="Left" Height="15" Margin="218,0,0,79" VerticalAlignment="Bottom" Width="70" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="f1" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5" Background="Black">
+                    <local:PacketUC x:Name="packetUC8" HorizontalAlignment="Left" Height="17" Margin="378,175,0,0" VerticalAlignment="Top" Width="15" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="f2" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5" Background="Black">
+                    <local:PacketUC x:Name="packetUC9" HorizontalAlignment="Left" Height="18" Margin="392,203,0,0" VerticalAlignment="Top" Width="17" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
                     </local:PacketUC>
-                    <local:PacketUC x:Name="f3" HorizontalAlignment="Left" Height="16" Margin="374,0,0,267" VerticalAlignment="Bottom" Width="88" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5" Background="Black">
+                    <local:PacketUC x:Name="packetUC10" HorizontalAlignment="Left" Height="17" Margin="395,220,0,0" VerticalAlignment="Top" Width="15" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC11" HorizontalAlignment="Left" Height="16" Margin="412,237,0,0" VerticalAlignment="Top" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC12" HorizontalAlignment="Left" Height="15" Margin="408,253,0,0" VerticalAlignment="Top" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC13" HorizontalAlignment="Left" Height="18" Margin="411,269,0,0" VerticalAlignment="Top" Width="14" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC14" HorizontalAlignment="Left" Height="17" Margin="402,289,0,0" VerticalAlignment="Top" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC15" HorizontalAlignment="Left" Height="15" Margin="396,306,0,0" VerticalAlignment="Top" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC16" HorizontalAlignment="Left" Margin="404,322,0,312" Width="15" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC4_Copy" HorizontalAlignment="Left" Height="15" Margin="217,0,0,203" VerticalAlignment="Bottom" Width="51" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC17" HorizontalAlignment="Left" Height="15" Margin="440,0,0,252" VerticalAlignment="Bottom" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC18" HorizontalAlignment="Left" Height="21" Margin="439,0,0,221" VerticalAlignment="Bottom" Width="16" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC19" HorizontalAlignment="Left" Height="14" Margin="440,0,0,203" VerticalAlignment="Bottom" Width="14" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC20" Height="17" Margin="468,0,420,127" VerticalAlignment="Bottom" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC21" HorizontalAlignment="Right" Height="17" Margin="0,0,272,225" VerticalAlignment="Bottom" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC22" HorizontalAlignment="Right" Height="16" Margin="0,0,271,203" VerticalAlignment="Bottom" Width="13" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC23" HorizontalAlignment="Right" Height="17" Margin="0,224,265,0" VerticalAlignment="Top" Width="16" BrushOfPacket="Black"/>
+                    <local:PacketUC x:Name="packetUC24" HorizontalAlignment="Right" Height="20" Margin="0,173,236,0" VerticalAlignment="Top" Width="19" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC25" HorizontalAlignment="Right" Height="18" Margin="0,0,103,221" VerticalAlignment="Bottom" Width="17" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC26" HorizontalAlignment="Left" Height="12" Margin="183,47,0,0" VerticalAlignment="Top" Width="49" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC27" HorizontalAlignment="Left" Height="13" Margin="294,5,0,0" VerticalAlignment="Top" Width="45" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC28" HorizontalAlignment="Left" Height="12" Margin="293,24,0,0" VerticalAlignment="Top" Width="45" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC29" HorizontalAlignment="Left" Height="14" Margin="293,43,0,0" VerticalAlignment="Top" Width="46" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC30" HorizontalAlignment="Right" Height="18" Margin="0,41,297,0" VerticalAlignment="Top" Width="54" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC31" HorizontalAlignment="Right" Height="11" Margin="0,26,181,0" VerticalAlignment="Top" Width="55" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC32" HorizontalAlignment="Left" Height="18" Margin="155,127,0,0" VerticalAlignment="Top" Width="148" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="packetUC33" HorizontalAlignment="Left" Height="17" Margin="384,60,0,0" VerticalAlignment="Top" Width="54" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
+                        <local:PacketUC.RenderTransform>
+                            <CompositeTransform/>
+                        </local:PacketUC.RenderTransform>
+                    </local:PacketUC>
+                    <local:PacketUC x:Name="adder" HorizontalAlignment="Right" Height="15" Margin="0,14,117,0" VerticalAlignment="Top" Width="17" BrushOfPacket="Black" RenderTransformOrigin="0.5,0.5">
                         <local:PacketUC.RenderTransform>
                             <CompositeTransform/>
                         </local:PacketUC.RenderTransform>
@@ -328,17 +712,17 @@
                     </Grid>
                     <Grid Height="200" Width="400">
                         <TextBlock x:Name="textBlock2" Margin="10,36,10,10" TextWrapping="Wrap" FontSize="16">
-                        	<Run Text="0    0    main : add $s3 , $s1, $s1"/>
+                        	<Run FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="4 add $s3, $s3, $s2&#x9;"/>
+                        	<LineBreak FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode"/>
+                        	<Run FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="8  sw $s3, 0($s0)&#x9;&#x9;"/>
                         	<LineBreak/>
-                        	<Run Text="100  4  add $s4 , $s1 , $s0"/>
+                        	<Run FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="12 add $s0, $s0, $s1"/>
                         	<LineBreak/>
-                        	<Run Text="...    8   sub  $s5 , $s1 ,  $s2"/>
+                        	<Run FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="16 beq $s3, $s4, exit&#x9;"/>
                         	<LineBreak/>
-                        	<Run Text="....    12  sub   $s6 , $s2 , $ s1"/>
+                        	<Run FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="20 beq $zero, $zero"/>
                         	<LineBreak/>
-                        	<Run Text="....    16   and $s7  , $s2 ,  $s1"/>
-                        	<LineBreak/>
-                        	<Run Text="....   20   exit :"/>
+                        	<Run FontSize="18.6669998168945" FontFamily="Segoe UI, Tahoma, Arial, Arial Unicode MS, Microsoft Sans Serif, Lucida Sans Unicode" Text="END"/>
                         </TextBlock>
                         <Rectangle Height="31" Margin="0,0,10,0" VerticalAlignment="Top" Fill="#FFDCBF08"/>
                         <TextBlock x:Name="textBlock3" Height="23" Margin="114,5,129,0" TextWrapping="Wrap" Text="Instruction Memory" VerticalAlignment="Top" Foreground="Black" FontSize="16" d:LayoutOverrides="LeftPosition, RightPosition"/>

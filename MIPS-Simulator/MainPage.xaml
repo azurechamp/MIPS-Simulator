@@ -9,9 +9,48 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-        <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Margin="20" Text="MIPS Simulator"></TextBlock>
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Margin="20" Text="MIPS Simulator"></TextBlock>
             <TextBlock Text=" Assembly Code for simulation " FontSize="22" Margin="10"></TextBlock>
-            <TextBlock Margin="20" Width="400" HorizontalAlignment="Left" Height="400" Text="#Testing r-format arithmetic operators&#xD;&#xA;&#xD;&#xA;#init registers&#xD;&#xA;.register $s0 -10&#xD;&#xA;.register $s1 5&#xD;&#xA;.register $s2 3&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;main:&#x9;add $s3, $s1, $s1&#x9;#5+10&#xD;&#xA;&#x9;&#x9;add $s4, $s1, $s0&#x9;#5+-10&#xD;&#xA;&#x9;&#x9;sub $s5, $s1, $s2&#x9;#5-3&#xD;&#xA;&#x9;&#x9;sub $s6, $s2, $s1&#x9;#3-5&#xD;&#xA;&#x9;&#x9;and $s7, $s2, $s1&#x9;#011 AND 101&#xD;&#xA;exit: &#xD;&#xA;&#xD;&#xA;" TextWrapping="Wrap" Foreground="White" SelectionHighlightColor="#FFE2E2E2" FontSize="18.667"></TextBlock>
+            <TextBlock Margin="20,20,0,20" Width="400" HorizontalAlignment="Left" Height="539" TextWrapping="Wrap" Foreground="White" SelectionHighlightColor="#FFE2E2E2" FontSize="18.667">
+            	<Run Text="#Puts the 2 times table into memory starting from 2"/>
+            	<LineBreak/>
+            	<Run Text="#going up to 20, at every word location. "/>
+            	<LineBreak/>
+            	<Run Text="#The memory now acts like an array, storing the values {0,2,4,...,18,20}"/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="#init registers"/>
+            	<LineBreak/>
+            	<Run Text=".register $s0 0&#x9;&#x9;#addr"/>
+            	<LineBreak/>
+            	<Run Text=".register $s1 4&#x9;&#x9;#increm addr"/>
+            	<LineBreak/>
+            	<Run Text=".register $s2 2&#x9;&#x9;#number increm"/>
+            	<LineBreak/>
+            	<Run Text=".register $s3 0&#x9;&#x9;#number val"/>
+            	<LineBreak/>
+            	<Run Text=".register $s4 22&#x9;#max number"/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="#main loop"/>
+            	<LineBreak/>
+            	<Run Text="main:&#x9;add $s3, $s3, $s2&#x9;#incrememnt number val"/>
+            	<LineBreak/>
+            	<Run Text="&#x9;&#x9;sw $s3, 0($s0)&#x9;&#x9;#store number at the new address"/>
+            	<LineBreak/>
+            	<Run Text="&#x9;&#x9;add $s0, $s0, $s1&#x9;#increment address"/>
+            	<LineBreak/>
+            	<Run Text="&#x9;&#x9;beq $s3, $s4, exit&#x9;#check if reached max"/>
+            	<LineBreak/>
+            	<Run Text="&#x9;&#x9;beq $zero, $zero, main&#x9;#start again"/>
+            	<LineBreak/>
+            	<Run Text="exit: "/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run/></TextBlock>
             <Button Height="40" Width="190" Margin="15" Content="Simulate" Click="Button_Click"></Button>
         </StackPanel>
     </Grid>
